@@ -8,7 +8,7 @@ def fib_even_sum(a, b, sum)
   if b % 2 == 0
     sum += b
   end
-  return sum if a  >= 4000000 || b >= 4000000
+  return sum if b >= 4000000
   fib_even_sum(b, a+b, sum)
 end
 
