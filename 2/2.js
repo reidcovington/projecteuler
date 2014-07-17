@@ -15,5 +15,6 @@ function fibEvenSum(a, b, sum) {
 }
 
 fibEvenSum(1, 2, 0);
+// => 4613732
 
 

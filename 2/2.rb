@@ -13,3 +13,4 @@ def fib_even_sum(a, b, sum)
 end
 
 p fib_even_sum(1, 2, 0)
+#=> 4613732

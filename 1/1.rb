@@ -16,3 +16,5 @@ end
 sum+=threes_array.reduce(:+)
 sum+=fives_array.reduce(:+)
 p sum
+
+# =>233168
