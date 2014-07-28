@@ -14,3 +14,21 @@ function findPalisUpTo(integer){
   };
   return palis
 };
+
+function findFactors(integer){
+  factorArray = [];
+  for (i = 2; i < integer; i++){
+    if (integer % i === 0){
+      factorArray.push(i);
+    }
+  };
+  return factorArray
+};
+
+
+
+
+
+
+
+
