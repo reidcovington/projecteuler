@@ -25,6 +25,21 @@ function findFactors(integer){
   return factorArray
 };
 
+function findLargestPaliWithFactors(){
+  paliFactors = [];
+  palis = findPalisUpTo(999999);
+  for (i = -1; i < palis.length; i--){
+    paliFactors = findFactors(palis[i])
+    if (paliFactors.length >= 1){
+      for (j = 0; j < paliFactors.length; j++){
+        if ((paliFactors[j].toString().length() === 3) && (paliFactors[j+1].toString().length() === 3) && (paliFactors[j] * paliFactors[j + 1] === palis[i])){
+          return palis[i]
+        };
+      };
+    };
+  };
+};
+
 
 
 
