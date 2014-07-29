@@ -17,9 +17,9 @@ function findPalisUpTo(integer){
 
 function findFactors(integer){
   factorArray = [];
-  for (i = 2; i < integer; i++){
-    if (integer % i === 0){
-      factorArray.push(i);
+  for (k = 2; k < integer; k++){
+    if (integer % k === 0){
+      factorArray.push(k);
     }
   };
   return factorArray
@@ -28,17 +28,18 @@ function findFactors(integer){
 function findLargestPaliWithFactors(){
   paliFactors = [];
   palis = findPalisUpTo(999999);
-  for (i = -1; i < palis.length; i--){
-    paliFactors = findFactors(palis[i])
-    if (paliFactors.length >= 1){
+  for (z = 1; z < palis.length; z++){
+    paliFactors = findFactors(palis[palis.length - z])
       for (j = 0; j < paliFactors.length; j++){
-        if ((paliFactors[j].toString().length() === 3) && (paliFactors[j+1].toString().length() === 3) && (paliFactors[j] * paliFactors[j + 1] === palis[i])){
-          return palis[i]
+        if ((paliFactors[j].toString().length === 3) && (paliFactors[j+1].toString().length === 3) && (paliFactors[j] * paliFactors[j + 1] === palis[palis.length - z])){
+          return palis[palis.length - z]
         };
       };
-    };
   };
 };
+
+findLargestPaliWithFactors();
+// =>906609
 
 
 
