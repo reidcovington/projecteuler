@@ -22,5 +22,5 @@ def find_largest_prime(integer)
   p factor_array.last
 end
 
-find_largest_prime(13195)
+find_largest_prime(600851475143)
 #=> 6857
